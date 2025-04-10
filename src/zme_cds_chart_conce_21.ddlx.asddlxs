@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+
+@UI.chart: [{ qualifier: 'ConcePorProvincia',
+    title: 'Concesionarios por Provincia',
+    chartType: #BAR,
+    dimensions: [ 'Provincia' ],
+    measures: [ 'TotalConcesionarios' ],
+    measureAttributes: [ { measure: 'TotalConcesionarios', role: #AXIS_1 } ],
+    dimensionAttributes: [ { dimension: 'Provincia', role: #CATEGORY } ],
+    description: 'Cantidad de concesionarios agrupados por provincia' }]
+
+annotate entity ZCDS_CHART_ZCONCE with 
+{
+ 
+  @UI.facet: [{
+    id: 'GraficoProvincias',
+    label: 'Gráfico: Concesionarios por Provincia',
+    position: 10,
+    purpose: #STANDARD,
+    type: #CHART_REFERENCE,
+    targetElement: 'Provincia',
+    targetQualifier: 'ConcePorProvincia'
+  }]
+  
+  TotalConcesionarios;
+}

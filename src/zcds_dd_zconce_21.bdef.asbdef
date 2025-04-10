@@ -1,0 +1,17 @@
+managed implementation in class zbp_cds_dd_zconce_21 unique;
+strict ( 2 );
+
+define behavior for ZCDS_DD_ZCONCE_21 //alias <alias_name>
+persistent table zconce_21
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) IdConce;
+    action sendemail result [1] $self;
+     action CallApp result [1] $self;
+
+}

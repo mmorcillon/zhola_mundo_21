@@ -1,0 +1,4 @@
+@EndUserText.label: 'asdadsasda'
+define service ZSD_JOIN_CLIENTE_COCHE_21 {
+  expose ZCDS_DD_VISCOCH_CLIEN_21;
+}

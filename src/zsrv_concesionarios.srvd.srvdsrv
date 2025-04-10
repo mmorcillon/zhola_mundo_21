@@ -1,0 +1,4 @@
+@EndUserText.label: 'asdasda'
+define service ZSRV_CONCESIONARIOS {
+  expose ZCDS_CHART_ZCONCE;
+}
